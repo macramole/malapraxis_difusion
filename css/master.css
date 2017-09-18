@@ -90,6 +90,10 @@ header nav ul li a:hover {
   width: 40%;
   opacity: 1;
 }
+#imgs .wrapper img.cita {
+  width: 30%;
+  opacity: 1;
+}
 #integrant {
   background-color: #8a8947;
   color: #fff;
