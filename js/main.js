@@ -1,4 +1,4 @@
-var CANT_IMAGENES = 70;
+var CANT_IMAGENES = 68;
 var CANT_IMAGENES_GRANDES = 10;
 var CANT_CITAS = 2;
 // var IMAGENES_GRANDES = [ 7, 18 ];
@@ -16,7 +16,7 @@ $(function() {
 function addImages() {
   var currentImagenGrande = 1;
   var currentCitas = 1;
-  CANT_IMAGENES_TOTALES = CANT_IMAGENES + CANT_IMAGENES / 2;
+  CANT_IMAGENES_TOTALES = CANT_IMAGENES * 2 + 6;
 
   for ( var i = 1 ; i <= CANT_IMAGENES_TOTALES ; i++ ) {
       var $img = $("<img>").attr("src", "images/fotos/" + (i % CANT_IMAGENES) + ".JPG");
@@ -38,11 +38,6 @@ function addImages() {
               currentCitas++;
           }
       }
-  }
-
-  for ( var i = 1 ; i <= Math.floor(CANT_IMAGENES / 2) ; i++ ) {
-      var $img = $("<img>").attr("src", "images/fotos/" + i + ".JPG");
-      $("#imgs .wrapper").append($img);
   }
 
   $('#imgs .wrapper').packery({
