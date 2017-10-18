@@ -150,6 +150,19 @@ header {
             font-size: 1.2em;
         }
 
+        > ul {
+          padding-bottom: 2em !important;
+          transition: background-color 0.8s;
+
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.19);
+          }
+
+          li:last-child {
+            margin-bottom: 0;
+          }
+        }
+
         ul {
             padding: 0;
             margin: 0;
@@ -158,8 +171,25 @@ header {
             li {
                 margin-bottom: 2em;
 
+
+
                 ul li {
                     margin-bottom: 0.3em;
+                }
+
+                &.title {
+                  font-weight: bold;
+                  font-size: 1.3em;
+                  text-shadow: 1px 1px black;
+                  padding-top: 1.5em;
+                  border-top: 1px solid #ffffff80;
+                }
+
+                .cargo {
+                  font-size: 0.65em;
+                  font-family: Arial;
+                  margin: 0.2em 0em 1em 0;
+                  font-style: italic;
                 }
             }
         }

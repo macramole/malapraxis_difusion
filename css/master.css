@@ -110,6 +110,16 @@ header nav ul li a:hover {
   margin-bottom: 0.7em;
   font-size: 1.2em;
 }
+#integrant .wrapper > ul {
+  padding-bottom: 2em !important;
+  transition: background-color 0.8s;
+}
+#integrant .wrapper > ul:hover {
+  background-color: rgba(0,0,0,0.19);
+}
+#integrant .wrapper > ul li:last-child {
+  margin-bottom: 0;
+}
 #integrant .wrapper ul {
   padding: 0;
   margin: 0;
@@ -120,5 +130,18 @@ header nav ul li a:hover {
 }
 #integrant .wrapper ul li ul li {
   margin-bottom: 0.3em;
+}
+#integrant .wrapper ul li.title {
+  font-weight: bold;
+  font-size: 1.3em;
+  text-shadow: 1px 1px #000;
+  padding-top: 1.5em;
+  border-top: 1px solid rgba(255,255,255,0.502);
+}
+#integrant .wrapper ul li .cargo {
+  font-size: 0.65em;
+  font-family: Arial;
+  margin: 0.2em 0em 1em 0;
+  font-style: italic;
 }
 /*# sourceMappingURL=master.css.map */
