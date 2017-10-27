@@ -4,6 +4,8 @@
         <meta charset="utf-8">
         <title>Proyecto Mala Praxis // UNTREF</title>
 
+        <link rel="stylesheet" href="css/vis.min.css" media="screen" charset="utf-8">
+
         <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700" rel="stylesheet">
         <link rel="stylesheet" href="css/jquery.fullPage.css" media="screen" charset="utf-8">
         <link rel="stylesheet" href="css/master.css" media="screen" charset="utf-8">
@@ -18,7 +20,7 @@
                     <li><a href="#inicio">inicio</a></li>
                     <li><a href="#informacion">información</a></li>
                     <li><a href="#imagenes">imágenes</a></li>
-                    <!-- <li><a href="#">entrevistas</a></li> -->
+                    <li><a href="#mapa">mapa</a></li>
                     <li><a href="#integrantes">integrantes</a></li>
                 </ul>
             </nav>
@@ -77,6 +79,13 @@
             <div class="section" data-anchor="imagenes" id="imgs">
                 <div class="wrapper">
                     <div class="sizer">&nbsp;</div>
+                </div>
+            </div>
+            <div class="section" data-anchor="mapa" id="map">
+                <div class="wrapper">
+                    <!-- <img src="images/mapa.png" alt="" /> -->
+                    <h1>Mapa interactivo de actores e instituciones</h1>
+                    <div id="mynetwork"></div>
                 </div>
             </div>
             <div class="section" data-anchor="integrantes" id="integrant">
@@ -258,5 +267,9 @@
         <script src="js/packery.pkgd.min.js" charset="utf-8"></script>
         <script src="js/imagesloaded.pkgd.min.js" charset="utf-8"></script>
         <script src="js/main.js" charset="utf-8"></script>
+
+        <script src="js/vis.min.js" charset="utf-8"></script>
+        <script src="js/dataMP.js" charset="utf-8"></script>
+        <script src="js/mpTree.js" charset="utf-8"></script>
     </body>
 </html>

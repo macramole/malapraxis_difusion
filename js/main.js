@@ -7,7 +7,18 @@ var cantImagesLoaded = 0;
 
 $(function() {
     $('#fullpage').fullpage({
-        scrollOverflow : true
+        scrollOverflow : true,
+
+        afterLoad  : function(anchorLink, index) {
+            if (anchorLink == "mapa") {
+                // $("#map .wrapper").css("height", "100%");
+                createNetwork();
+            }
+
+
+            $("nav a").removeClass("active");
+            $("a[href='#" + anchorLink + "']").addClass("active");
+        }
     });
 
     addImages();
