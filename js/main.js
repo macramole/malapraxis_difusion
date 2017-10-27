@@ -6,25 +6,25 @@ var CANT_CITAS = 2;
 var cantImagesLoaded = 0;
 
 $(function() {
-    addImages();
+    addImages( function() {
+        $('#fullpage').fullpage({
+            scrollOverflow : true,
 
-    $('#fullpage').fullpage({
-        scrollOverflow : true,
+            afterLoad  : function(anchorLink, index) {
+                if (anchorLink == "mapa") {
+                    // $("#map .wrapper").css("height", "100%");
+                    createNetwork();
+                }
 
-        afterLoad  : function(anchorLink, index) {
-            if (anchorLink == "mapa") {
-                // $("#map .wrapper").css("height", "100%");
-                createNetwork();
+
+                $("nav a").removeClass("active");
+                $("a[href='#" + anchorLink + "']").addClass("active");
             }
-
-
-            $("nav a").removeClass("active");
-            $("a[href='#" + anchorLink + "']").addClass("active");
-        }
-    });
+        });
+    } );
 });
 
-function addImages() {
+function addImages(callback) {
   var currentImagenGrande = 1;
   var currentCitas = 1;
   CANT_IMAGENES_TOTALES = CANT_IMAGENES * 2 + 6;
@@ -64,6 +64,7 @@ function addImages() {
   $('#imgs .wrapper').imagesLoaded()
        .always( function( instance ) {
            $('#imgs .wrapper').packery('layout');
+           callback();
        })
       .progress( function( instance, image ) {
           cantImagesLoaded++;
