@@ -30,7 +30,7 @@ function addImages() {
   CANT_IMAGENES_TOTALES = CANT_IMAGENES * 2 + 6;
 
   for ( var i = 1 ; i <= CANT_IMAGENES_TOTALES ; i++ ) {
-      var $img = $("<img>").attr("src", "images/fotos/" + (i % CANT_IMAGENES) + ".JPG");
+      var $img = $("<img>").attr("src", "images/fotos/" + ((i % CANT_IMAGENES)+1) + ".JPG");
       $("#imgs .wrapper").append($img);
 
       if ( i % 11 == 0 ) {
