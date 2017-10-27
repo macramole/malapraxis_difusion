@@ -6,6 +6,8 @@ var CANT_CITAS = 2;
 var cantImagesLoaded = 0;
 
 $(function() {
+    addImages();
+
     $('#fullpage').fullpage({
         scrollOverflow : true,
 
@@ -20,8 +22,6 @@ $(function() {
             $("a[href='#" + anchorLink + "']").addClass("active");
         }
     });
-
-    addImages();
 });
 
 function addImages() {
