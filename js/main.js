@@ -21,8 +21,15 @@ $(function() {
                 $("a[href='#" + anchorLink + "']").addClass("active");
             }
         });
+
+        init();
     } );
 });
+
+function init() {
+    $("body").removeClass("init");
+    $("#overlayLoading").addClass("hide");
+}
 
 function addImages(callback) {
   var currentImagenGrande = 1;

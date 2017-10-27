@@ -1,6 +1,9 @@
 body {
   font-family: "Droid Serif", serif;
 }
+body.init {
+  overflow: hidden;
+}
 p {
   line-height: 1.5em;
 }
@@ -44,6 +47,28 @@ header nav ul li a.active {
 }
 .section {
   background-image: url("../images/bg3.png");
+}
+#overlayLoading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99999999;
+  width: 100%;
+  background-color: #487ea5;
+  background-image: url("../images/bg3.png");
+  height: 100%;
+  transition: opacity 0.8s, visibility 0.8s;
+}
+#overlayLoading.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+#overlayLoading .wrapper {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 #hola {
   text-align: center;
